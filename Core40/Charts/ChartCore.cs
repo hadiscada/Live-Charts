@@ -242,7 +242,11 @@ namespace LiveCharts.Charts
                 var ax = AxisY[index];
                 var titleSize = ax.View.UpdateTitle(this, -90d);
                 var biggest = ax.PrepareChart(AxisOrientation.Y, this);
-
+                if (!double.IsNaN(ax.Width))
+                {
+                    biggest.Width = ax.Width;
+                }
+                
                 var x = curSize.Left;
 
                 if (ax.Position == AxisPosition.LeftBottom)

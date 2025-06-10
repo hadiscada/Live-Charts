@@ -634,7 +634,8 @@ namespace LiveCharts.Wpf
             Model.Separator = Separator.AsCoreElement(Model, source);
             Model.DisableAnimations = DisableAnimations;
             Model.Sections = Sections.Select(x => x.AsCoreElement(Model, source)).ToList();
-
+            Model.Width = Width;
+            
             return Model;
         }
 
